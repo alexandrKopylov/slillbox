@@ -107,16 +107,14 @@ public class T_2_05_1 {
         Scanner sc = new Scanner(
 
 
-       "530\n" +
-               "2000\n" +
-               "false\n" +
-               "50\n" +
-               "\n"
-
+                "530\n" +
+                        "2000\n" +
+                        "false\n" +
+                        "50\n" +
+                        "\n"
 
 
         );
-
 
 
         int paperReserve = 600000;
@@ -129,18 +127,18 @@ public class T_2_05_1 {
 // data  input
         int pagesInBook = sc.nextInt();
         int booksCount = sc.nextInt();
-       // sc.nextLine();
-        boolean coldPrintingMode =Boolean.parseBoolean(sc.nextLine());
+        // sc.nextLine();
+        boolean coldPrintingMode = Boolean.parseBoolean(sc.nextLine());
         sc.nextLine();
         double printRollerTemp = sc.nextInt();
 
 
         boolean tempReady = printRollerMinTemp <= printRollerTemp && printRollerMaxTemp >= printRollerTemp;
 
-        boolean contPaperEnaght = paperReserve >= pagesInBook*booksCount/2;
-        boolean countIncEnaf =  inkReserve >= pagesInBook*booksCount/2+booksCount;
-        boolean countCoverEnaf = coverReserve >=  booksCount;
-        boolean modeOk = tempReady || coldPrintingMode ;
+        boolean contPaperEnaght = paperReserve >= pagesInBook * booksCount / 2;
+        boolean countIncEnaf = inkReserve >= pagesInBook * booksCount / 2 + booksCount;
+        boolean countCoverEnaf = coverReserve >= booksCount;
+        boolean modeOk = tempReady || coldPrintingMode;
 
         if (contPaperEnaght && countIncEnaf && countCoverEnaf && modeOk) {
             System.out.println("--ok");
